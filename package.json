@@ -1,8 +1,33 @@
 {
+  "name": "lucid",
+  "description": "aim for simplicity theme",
+  "version": "0.1.0",
+  "engines": {
+    "ghost": ">=4.0.0",
+    "ghost-api": "v4"
+  },
+  "gpm": {
+    "type": "theme",
+    "categories": [
+      "Clean",
+      "Blog",
+      "Minimal",
+      "Responsive"
+    ]
+  },
+  "keywords": [
+    "ghost",
+    "theme",
+    "ghost-theme"
+  ],
+  "license": "MIT",
   "author": {
     "email": "dhfhfk1203@gmail.com",
-    "name": "Dhfhfk",
-    "url": "https://blog.dhfhfk.kro.kr"
+    "name": "Dhfhfk"
+  },
+  "screenshots": {
+    "desktop": "assets/screenshot-desktop.png",
+    "mobile": "assets/screenshot-mobile.png"
   },
   "config": {
     "posts_per_page": 10,
@@ -26,32 +51,5 @@
         "width": 2000
       }
     }
-  },
-  "demo": "https://dhfhfk.kro.kr",
-  "description": "aim for simplicity",
-  "engines": {
-    "ghost": ">=4.0.0",
-    "ghost-api": "v4"
-  },
-  "gpm": {
-    "type": "theme",
-    "categories": [
-      "Clean",
-      "Blog",
-      "Minimal",
-      "Responsive"
-    ]
-  },
-  "keywords": [
-    "ghost",
-    "theme",
-    "ghost-theme"
-  ],
-  "license": "MIT",
-  "name": "Lucid",
-  "screenshots": {
-    "desktop": "assets/screenshot-desktop.png",
-    "mobile": "assets/screenshot-mobile.png"
-  },
-  "version": "0.1.0"
+  }
 }
