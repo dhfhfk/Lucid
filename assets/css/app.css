@@ -247,7 +247,8 @@ textarea {
     --primary-foreground-color: #4a4a4a;
     --secondary-foreground-color: #000;
     --primary-subtle-color: #0470ee;
-    --secondary-subtle-color: #e2e2e2;
+    --secondary-subtle-color: #f4f8fd;
+    --post-hr-color: #e2e2e2;
     --titles-color: #333;
     --link-color: #133467;
     --primary-border-color: #9b9b9b;
@@ -273,7 +274,8 @@ textarea {
     --primary-foreground-color: #ccc;
     --secondary-foreground-color: #fff;
     --primary-subtle-color: #2c2fe6;
-    --secondary-subtle-color: #3a3a3a;
+    --secondary-subtle-color: #141920;
+    --post-hr-color: #3a3a3a;
     --titles-color: #b4b4b4;
     --link-color: #b6b7f6;
     --primary-border-color: #1d1d1d;
@@ -300,7 +302,8 @@ textarea {
         --primary-foreground-color: #ccc;
         --secondary-foreground-color: #fff;
         --primary-subtle-color: #2c2fe6;
-        --secondary-subtle-color: #3a3a3a;
+        --secondary-subtle-color: #141920;
+        --post-hr-color: #3a3a3a;
         --titles-color: #b4b4b4;
         --link-color: #b6b7f6;
         --primary-border-color: #1d1d1d;

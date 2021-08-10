@@ -351,7 +351,7 @@
     position: relative;
     margin: 30px 0;
     border: 0;
-    border-top: 1px solid var(--secondary-subtle-color);
+    border-top: 1px solid var(--post-hr-color);
 }
 @media only screen and (min-width: 48rem) {
     .l-post-content hr {
