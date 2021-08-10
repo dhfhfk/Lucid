@@ -559,7 +559,7 @@ body {
     min-height: 100vh;
     color: var(--primary-foreground-color);
     font-size: 1rem;
-    font-family: Interop, Helvetica, Arial, sans-serif;
+    font-family: "Spoqa Han Sans Neo", "sans-serif";
     font-display: swap;
     overflow-x: hidden;
     background-color: var(--background-color);
