@@ -255,6 +255,7 @@ textarea {
     --article-shadow-normal: 0 10px 10px rgba(0, 0, 0, 0.08);
     --article-shadow-hover: 0 4px 60px 0 rgba(0, 0, 0, 0.2);
     --transparent-background-color: hsla(0, 0%, 100%, 0.99);
+    --transparent-nav-color: rgba(255, 255, 255, 0.75);
     --footer-background-color: #133467;
     --submenu-shadow-color-opacity: 0.25;
     --button-shadow-color-normal: hsla(0, 0%, 42.4%, 0.2);
@@ -280,6 +281,7 @@ textarea {
     --article-shadow-normal: 0 4px 5px 5px rgba(0, 0, 0, 0.1);
     --article-shadow-hover: 0 4px 5px 10px rgba(0, 0, 0, 0.1);
     --transparent-background-color: rgba(0, 0, 0, 0.99);
+    --transparent-nav-color: rgba(0, 0, 0, 0.75);
     --footer-background-color: #080808;
     --submenu-shadow-color-opacity: 0.55;
     --button-shadow-color-normal: rgba(10, 10, 10, 0.5);
@@ -306,6 +308,7 @@ textarea {
         --article-shadow-normal: 0 4px 5px 5px rgba(0, 0, 0, 0.1);
         --article-shadow-hover: 0 4px 5px 10px rgba(0, 0, 0, 0.1);
         --transparent-background-color: rgba(0, 0, 0, 0.99);
+        --transparent-nav-color: rgba(0, 0, 0, 0.75);
         --footer-background-color: #080808;
         --submenu-shadow-color-opacity: 0.55;
         --button-shadow-color-normal: rgba(10, 10, 10, 0.5);
@@ -1135,13 +1138,13 @@ fieldset {
     left: 0;
     width: 100%;
     z-index: 4;
-    background-color: var(--background-color);
+    background-color: var(--transparent-nav-color);
     will-change: transform;
     transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 @media only screen and (min-width: 48rem) {
     .m-header {
-        padding: 15px 0;
+        padding: 5px 0;
     }
 }
 .m-header.mobile-menu-opened {
@@ -1158,9 +1161,6 @@ fieldset {
 }
 .m-header.headroom--pinned .m-header__shadow {
     display: none;
-}
-.m-header.headroom--unpinned {
-    transform: translateY(-100%);
 }
 .m-header.submenu-is-active {
     background-color: var(--background-color);
