@@ -986,21 +986,18 @@
 }
 .m-author {
     padding: 10px 20px;
-    border-color: var(--secondary-subtle-color);
-    border-style: solid;
-    border-width: 1px 0;
     margin: 0 auto;
 }
 @media only screen and (min-width: 48rem) {
     .m-author {
         display: flex;
-        justify-content: left;
+        justify-content: center;
         padding: 10px 36px;
     }
 }
 @media only screen and (min-width: 80rem) {
     .m-author {
-        padding: 60px 0;
+        padding: 10px 0;
     }
 }
 @media only screen and (min-width: 48rem) {
