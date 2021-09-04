@@ -1776,12 +1776,13 @@ _:-ms-fullscreen {
 }
 .m-hero__picture.in-post {
     opacity: 1;
+    background-color: var(--background-color);
 }
 .m-hero__picture img {
     width: 100%;
     height: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
+    -o-object-fit: contain;
+    object-fit: contain;
 }
 .m-hero__content {
     position: relative;
