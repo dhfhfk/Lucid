@@ -102,7 +102,7 @@
     line-height: 1.3;
     font-weight: 700;
     padding-top: 5px;
-    margin: 0 0 30px;
+    margin: 0 0 -23px;
 }
 @media only screen and (min-width: 48rem) {
     .l-post-content h1,
@@ -112,7 +112,7 @@
     .l-post-content h5,
     .l-post-content h6 {
         padding-top: 10px;
-        margin-bottom: 40px;
+        margin-bottom: -16px;
     }
 }
 .l-post-content h1 {
@@ -241,13 +241,13 @@
 }
 .l-post-content.kg-image-card,
 .l-post-content figure {
-    padding: 20px 0 40px;
+    padding: 20px 0 10px;
     margin: 0 -20px;
 }
 @media only screen and (min-width: 48rem) {
     .l-post-content.kg-image-card,
     .l-post-content figure {
-        padding: 20px 0 50px;
+        padding: 20px 0 10px;
         margin: 0;
     }
 }
@@ -437,7 +437,7 @@
 }
 .l-post-content code {
     display: inline-block;
-    color: var(--link-color);
+    color: var(--code-color);
     font-size: 0.9rem;
     padding: 0 5px;
 }
