@@ -443,13 +443,12 @@
 }
 .l-post-content code,
 .l-post-content pre {
-    font-family: Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace;
+    font-family: D2Coding, Monaco, Andale Mono, Ubuntu Mono, monospace;
     border-radius: 5px;
-    background-color: var(--secondary-subtle-color);
+    background-color: var(--code-block-color);
 }
 .l-post-content pre {
     line-height: 1.4;
-    margin: 0 0 25px;
     overflow-x: auto;
     white-space: pre;
     word-spacing: normal;
@@ -465,12 +464,12 @@
 }
 @media only screen and (min-width: 48rem) {
     .l-post-content pre {
-        margin-bottom: 30px;
+        margin-bottom: -5px;
     }
 }
 .l-post-content pre > code {
     display: block;
-    padding: 10px 10px 0;
+    padding: 10px 10px 10px;
     white-space: pre;
     word-spacing: normal;
     word-break: normal;
@@ -485,7 +484,7 @@
 }
 @media only screen and (min-width: 48rem) {
     .l-post-content pre > code {
-        padding: 20px 20px 0;
+        padding: 15px 20px 15px;
     }
 }
 .l-post-content pre.line-numbers > code {

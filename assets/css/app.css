@@ -251,6 +251,8 @@ textarea {
     --post-hr-color: #e2e2e2;
     --titles-color: #1f1f1f;
     --link-color: #133467;
+    --code-color: #eaeaea;
+    --code-block-color: #1e1e1e;
     --primary-border-color: #9b9b9b;
     --secondary-border-color: #f0f8ff;
     --article-shadow-normal: 0 10px 10px rgba(0, 0, 0, 0.08);
@@ -278,6 +280,8 @@ textarea {
     --post-hr-color: #3a3a3a;
     --titles-color: #eaeaea;
     --link-color: #b6b7f6;
+    --code-color: #eaeaea;
+    --code-block-color: #1e1e1e;
     --primary-border-color: #1d1d1d;
     --secondary-border-color: #0f0f0f;
     --article-shadow-normal: 0 4px 5px 5px rgba(0, 0, 0, 0.1);
@@ -306,6 +310,8 @@ textarea {
         --post-hr-color: #3a3a3a;
         --titles-color: #eaeaea;
         --link-color: #b6b7f6;
+        --code-color: #eaeaea;
+        --code-block-color: #1e1e1e;
         --primary-border-color: #1d1d1d;
         --secondary-border-color: #0f0f0f;
         --article-shadow-normal: 0 4px 5px 5px rgba(0, 0, 0, 0.1);
