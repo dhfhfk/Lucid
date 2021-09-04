@@ -250,6 +250,7 @@ textarea {
     --secondary-subtle-color: #f4f8fd;
     --post-hr-color: #e2e2e2;
     --titles-color: #1f1f1f;
+    --caption-color: #535353;
     --link-color: #133467;
     --code-color: #eaeaea;
     --code-block-color: #1e1e1e;
@@ -279,6 +280,7 @@ textarea {
     --secondary-subtle-color: #141920;
     --post-hr-color: #3a3a3a;
     --titles-color: #eaeaea;
+    --caption-color: #9f9f9f;
     --link-color: #b6b7f6;
     --code-color: #eaeaea;
     --code-block-color: #1e1e1e;
@@ -309,6 +311,7 @@ textarea {
         --secondary-subtle-color: #141920;
         --post-hr-color: #3a3a3a;
         --titles-color: #eaeaea;
+        --caption-color: #9f9f9f;
         --link-color: #b6b7f6;
         --code-color: #eaeaea;
         --code-block-color: #1e1e1e;
