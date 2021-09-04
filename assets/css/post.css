@@ -102,7 +102,7 @@
     line-height: 1.3;
     font-weight: 700;
     padding-top: 5px;
-    margin: 0 0 -23px;
+    margin: 0 0 5px;
 }
 @media only screen and (min-width: 48rem) {
     .l-post-content h1,
@@ -112,7 +112,7 @@
     .l-post-content h5,
     .l-post-content h6 {
         padding-top: 10px;
-        margin-bottom: -16px;
+        margin-bottom: 5px;
     }
 }
 .l-post-content h1 {
@@ -241,13 +241,13 @@
 }
 .l-post-content.kg-image-card,
 .l-post-content figure {
-    padding: 20px 0 10px;
+    padding: 0px 0 10px;
     margin: 0 -20px;
 }
 @media only screen and (min-width: 48rem) {
     .l-post-content.kg-image-card,
     .l-post-content figure {
-        padding: 20px 0 10px;
+        padding: 2px 0 10px;
         margin: 0;
     }
 }
@@ -985,7 +985,7 @@
     text-align: center;
 }
 .m-author {
-    padding: 40px 20px;
+    padding: 10px 20px;
     border-color: var(--secondary-subtle-color);
     border-style: solid;
     border-width: 1px 0;
@@ -994,8 +994,8 @@
 @media only screen and (min-width: 48rem) {
     .m-author {
         display: flex;
-        justify-content: center;
-        padding: 60px 40px;
+        justify-content: left;
+        padding: 10px 36px;
     }
 }
 @media only screen and (min-width: 80rem) {
@@ -1010,7 +1010,7 @@
     }
 }
 .m-author__picture {
-    width: 90px;
+    width: 60px;
     margin: 0 auto 25px;
 }
 @media only screen and (min-width: 48rem) {
@@ -1047,7 +1047,7 @@
     line-height: 1.3;
     font-size: 1.125rem;
     font-weight: 400;
-    margin: 0 0 15px;
+    margin: 0 0 -5px;
 }
 @media only screen and (min-width: 48rem) {
     .m-author__name {
@@ -1067,13 +1067,13 @@
 }
 .m-author-picture {
     display: block;
-    width: 90px;
-    height: 90px;
+    width: 60px;
+    height: 60px;
 }
 @media only screen and (min-width: 48rem) {
     .m-author-picture {
-        width: 100px;
-        height: 100px;
+        width: 50px;
+        height: 50px;
     }
 }
 .m-author-picture div {
