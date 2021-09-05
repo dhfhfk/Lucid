@@ -1938,6 +1938,9 @@ _:-ms-fullscreen {
 .m-heading {
     text-align: center;
     margin: 0 auto 40px;
+    border-bottom: 1px solid;
+    border-color: var(--post-hr-color);
+    padding-bottom: 25px;
 }
 @media only screen and (min-width: 48rem) {
     .m-heading {
