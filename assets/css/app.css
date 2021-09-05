@@ -561,6 +561,9 @@ textarea {
 .icon-behance:before {
     content: "\E951";
 }
+.icon-link:before {
+    content: "\E9CB";
+}
 body {
     display: flex;
     flex-direction: column;
