@@ -561,6 +561,9 @@ textarea {
 .icon-behance:before {
     content: "\E951";
 }
+.icon-link:before {
+    content: "\E9CB";
+}
 body {
     display: flex;
     flex-direction: column;
@@ -773,7 +776,7 @@ fieldset {
 .m-icon-button.filled {
     background-color: var(--background-color);
     box-shadow: 0 2px 4px var(--button-shadow-color-normal), 0 0 0 transparent;
-    transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
+    transition: all 0.1s cubic-bezier(0.02, 0.01, 0.47, 1);
 }
 .m-icon-button.filled:hover {
     box-shadow: 0 4px 8px var(--button-shadow-color-hover), 0 0 0 transparent;
@@ -1938,6 +1941,10 @@ _:-ms-fullscreen {
 .m-heading {
     text-align: center;
     margin: 0 auto 40px;
+    border-bottom: 1px solid;
+    border-color: var(--post-hr-color);
+    padding-bottom: 25px;
+    word-break: keep-all;
 }
 @media only screen and (min-width: 48rem) {
     .m-heading {
