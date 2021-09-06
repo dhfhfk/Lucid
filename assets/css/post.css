@@ -166,14 +166,14 @@
 .l-post-content p {
     letter-spacing: 0.2px;
     line-height: 1.5;
-    font-size: 1.125rem;
+    font-size: 1.1rem;
     margin-bottom: 25px;
 }
 @media only screen and (min-width: 48rem) {
     .l-post-content p {
         letter-spacing: 0.3px;
         line-height: 1.6;
-        font-size: 1.25rem;
+        font-size: 1.15rem;
         margin-bottom: 30px;
     }
 }
@@ -306,7 +306,7 @@
 @media only screen and (min-width: 48rem) {
     .l-post-content.kg-image-card figcaption,
     .l-post-content figure figcaption {
-        font-size: 0.875rem;
+        font-size: 0.8rem;
         padding: 15px 0 0;
     }
 }
