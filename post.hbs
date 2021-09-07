@@ -38,13 +38,35 @@ into the {body} of the default.hbs template --}}
           <div
             class="l-post-content js-progress-content">
             <header class="m-heading">
+              {{#if primary_tag}}
+                <a href="{{primary_tag.url}}" class="m-heading__meta__tag">{{primary_tag.name}}</a>
+                <span class="m-heading__meta__divider" aria-hidden="true">&bull;</span>
+              {{/if}}
               <h1 class="m-heading__title in-post">{{title}}</h1>
+              <p class="m-heading__description">{{excerpt}}</p>
               <div class="m-heading__meta">
-                {{#if primary_tag}}
-                  <a href="{{primary_tag.url}}" class="m-heading__meta__tag">{{primary_tag.name}}</a>
-                  <span class="m-heading__meta__divider" aria-hidden="true">&bull;</span>
-                {{/if}}
-                <span class="m-heading__meta__time">{{date published_at}}</span>
+                <div class="m-author__content">
+                  <div class="m-author__picture">
+                    <a href="{{primary_author.url}}" class="m-author-picture" aria-label="{{primary_author.name}}">
+                      {{#if primary_author.profile_image}}
+                        <div style="background-image: url({{primary_author.profile_image}});"></div>
+                      {{else}}
+                        <div style="background-image: url({{asset "images/default-avatar-square-small.jpg"}});"></div>
+                      {{/if}}
+                    </a>
+                  </div>
+                  <div class="m-author__info">
+                    <h4 class="m-author__name">
+                      <a href="{{primary_author.url}}">{{primary_author.name}}</a>
+                    </h4>
+                    {{#has author="count:>1"}}
+                      <p class="m-small-text in-author-along-with">
+                        {{authors separator=", " prefix=(t "Among with no break line") from="2"}}
+                      </p>
+                    {{/has}}
+                    <span class="m-heading__meta__time">{{date published_at}}</span>
+                  </div>
+                </div>
               </div>
             </header>
             <div class="pos-relative js-post-content">
@@ -77,55 +99,6 @@ into the {body} of the default.hbs template --}}
             </div>
           </div>
         </div>
-        <section class="m-author">
-          <div class="m-author__content">
-            <div class="m-author__picture">
-              <a href="{{primary_author.url}}" class="m-author-picture" aria-label="{{primary_author.name}}">
-                {{#if primary_author.profile_image}}
-                  <div style="background-image: url({{primary_author.profile_image}});"></div>
-                {{else}}
-                  <div style="background-image: url({{asset "images/default-avatar-square-small.jpg"}});"></div>
-                {{/if}}
-              </a>
-            </div>
-            <div class="m-author__info">
-              <h4 class="m-author__name">
-                <a href="{{primary_author.url}}">{{primary_author.name}}</a>
-              </h4>
-              {{#has author="count:>1"}}
-                <p class="m-small-text in-author-along-with">
-                  {{authors separator=", " prefix=(t "Among with no break line") from="2"}}
-                </p>
-              {{/has}}
-              {{#if primary_author.bio}}
-                <p class="m-author__bio">{{primary_author.bio}}</p>
-              {{/if}}
-              <ul class="m-author-links">
-                {{#if primary_author.website}}
-                  <li>
-                    <a href="{{primary_author.website}}" target="_blank" rel="noopener" aria-label="{{t "Website"}}">
-                      <span class="icon-globe" aria-hidden="true"></span>
-                    </a>
-                  </li>
-                {{/if}}
-                {{#if primary_author.facebook}}
-                  <li>
-                    <a href="https://facebook.com/{{primary_author.facebook}}" target="_blank" rel="noopener" aria-label="Facebook">
-                      <span class="icon-facebook" aria-hidden="true"></span>
-                    </a>
-                  </li>
-                {{/if}}
-                {{#if primary_author.twitter}}
-                  <li>
-                    <a href="https://twitter.com/{{primary_author.twitter}}" target="_blank" rel="noopener" aria-label="Twitter">
-                      <span class="icon-twitter" aria-hidden="true"></span>
-                    </a>
-                  </li>
-                {{/if}}
-              </ul>
-            </div>
-          </div>
-        </section>
         {{!-- If you want to embed comments, this is a good place to do it! --}}
         {{!--
           <section class="m-comments">
