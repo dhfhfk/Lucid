@@ -55,9 +55,9 @@ into the {body} of the default.hbs template --}}
                     </a>
                   </div>
                   <div class="m-author__info">
-                    <h4 class="m-author__name">
+                    <div class="m-author__name">
                       <a href="{{primary_author.url}}">{{primary_author.name}}</a>
-                    </h4>
+                    </div>
                     {{#has author="count:>1"}}
                       <p class="m-small-text in-author-along-with">
                         {{authors separator=", " prefix=(t "Among with no break line") from="2"}}
@@ -71,7 +71,7 @@ into the {body} of the default.hbs template --}}
             <div class="pos-relative js-post-content">
               <div class="m-share">
                 <div class="m-share__content js-sticky">
-                  <a href="#" class="m-icon-button filled in-share" onclick="clip(); return false;">
+                  <a href="#" class="m-icon-button filled in-share" aria-label="글 링크 복사" onclick="clip(); return false;">
                     <span class="icon-link" aria-hidden="true"></span>
                   </a>
                   <button class="m-icon-button filled in-share progress js-scrolltop" aria-label="{{t "Scroll to top"}}">
