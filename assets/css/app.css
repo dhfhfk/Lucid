@@ -260,7 +260,7 @@ textarea {
     --article-shadow-hover: 0 4px 60px 0 rgba(0, 0, 0, 0.2);
     --transparent-background-color: hsla(0, 0%, 100%, 0.99);
     --transparent-nav-color: rgba(255, 255, 255, 0.75);
-    --footer-background-color: #133467;
+    --footer-background-color: #080808;
     --submenu-shadow-color-opacity: 0.25;
     --button-shadow-color-normal: hsla(0, 0%, 42.4%, 0.2);
     --button-shadow-color-hover: hsla(0, 0%, 42.4%, 0.3);
