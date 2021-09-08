@@ -1918,11 +1918,6 @@ _:-ms-fullscreen {
     padding: 0;
     margin: 0;
 }
-@media only screen and (min-width: 48rem) {
-    .m-hero-stats {
-        margin-left: 7px;
-    }
-}
 .m-hero-stats.with-picture {
     color: #fff;
 }
@@ -1945,7 +1940,6 @@ _:-ms-fullscreen {
     border-bottom: 1px solid;
     border-color: var(--post-hr-color);
     padding-bottom: 5px;
-    word-break: keep-all;
 }
 @media only screen and (min-width: 48rem) {
     .m-heading {
@@ -1966,6 +1960,7 @@ _:-ms-fullscreen {
     line-height: 1.3;
     font-size: 1.75rem;
     margin: 0 0 10px;
+    word-break: keep-all;
 }
 @media only screen and (min-width: 48rem) {
     .m-heading__title {
