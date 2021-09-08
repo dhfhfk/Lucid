@@ -195,17 +195,17 @@
 }
 .l-post-content b,
 .l-post-content strong {
-    font-weight: 600;
+    font-weight: 700;
 }
 .l-post-content em {
     font-style: italic;
 }
 .l-post-content a {
-    color: var(--primary-foreground-color);
+    color: var(--link-color);
     transition: color 0.2s linear;
 }
 .l-post-content a:hover {
-    color: var(--link-color);
+    color: var(--link-hover-color);
 }
 .l-post-content ol {
     letter-spacing: 0.2px;
