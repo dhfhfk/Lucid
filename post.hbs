@@ -58,15 +58,15 @@ into the {body} of the default.hbs template --}}
                     <div class="m-author__name">
                       <a href="{{primary_author.url}}">{{primary_author.name}}</a>
                     </div>
-                    {{#has author="count:>1"}}
-                      <p class="m-small-text in-author-along-with">
-                        {{authors separator=", " prefix=(t "Among with no break line") from="2"}}
-                      </p>
-                    {{/has}}
                     <span class="m-heading__meta__time">{{date published_at}}</span>
                   </div>
                 </div>
               </div>
+              {{#has author="count:>1"}}
+                <p class="m-small-text in-author-along-with">
+                  {{authors separator=", " prefix=(t "Among with no break line") from="2"}}
+                </p>
+              {{/has}}
             </header>
             <div class="pos-relative js-post-content">
               <div class="m-share">
