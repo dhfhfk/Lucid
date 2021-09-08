@@ -571,7 +571,9 @@ body {
     min-height: 100vh;
     color: var(--primary-foreground-color);
     font-size: 1rem;
-    font-family: "Spoqa Han Sans Neo", "sans-serif";
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+        Pretendard, Roboto, "Noto Sans KR", "Segoe UI", "Malgun Gothic",
+        sans-serif;
     font-display: swap;
     overflow-x: hidden;
     background-color: var(--background-color);
