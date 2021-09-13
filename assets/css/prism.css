@@ -1,5 +1,5 @@
 /* PrismJS 1.24.1
-https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+clike+javascript+autohotkey+bash+basic+batch+c+csharp+cpp+css-extras+csv+dart+diff+django+dns-zone-file+docker+editorconfig+excel-formula+flow+git+go+haml+http+hpkp+hsts+icon+ignore+ini+java+javadoc+javadoclike+javastacktrace+jsdoc+js-extras+json+json5+jsonp+jsstacktrace+js-templates+kotlin+latex+latte+less+livescript+log+lua+makefile+markdown+markup-templating+mongodb+nginx+objectivec+opencl+parser+perl+php+phpdoc+php-extras+powerquery+powershell+processing+promql+python+ruby+rust+sas+sass+scss+scala+scheme+shell-session+solution-file+sparql+splunk-spl+sqf+sql+stylus+turtle+typescript+typoscript+vbnet+vim+visual-basic+wasm+wiki+wolfram+xml-doc+xquery+yaml&plugins=autolinker+show-language+inline-color+keep-markup+command-line+toolbar+copy-to-clipboard+treeview */
+https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+clike+javascript+autohotkey+bash+basic+batch+c+csharp+cpp+css-extras+csv+dart+diff+django+dns-zone-file+docker+editorconfig+excel-formula+flow+git+go+haml+http+hpkp+hsts+icon+ignore+ini+java+javadoc+javadoclike+javastacktrace+jsdoc+js-extras+json+json5+jsonp+jsstacktrace+js-templates+kotlin+latex+latte+less+livescript+log+lua+makefile+markdown+markup-templating+mongodb+nginx+objectivec+opencl+parser+perl+php+phpdoc+php-extras+powerquery+powershell+processing+promql+python+ruby+rust+sas+sass+scss+scala+scheme+shell-session+solution-file+sparql+splunk-spl+sqf+sql+stylus+turtle+typescript+typoscript+vbnet+vim+visual-basic+wasm+wiki+wolfram+xml-doc+xquery+yaml&plugins=line-numbers+autolinker+show-language+inline-color+keep-markup+command-line+toolbar+copy-to-clipboard+diff-highlight+treeview */
 /**
  * prism.js tomorrow night eighties for JavaScript, CoffeeScript, CSS and HTML
  * Based on https://github.com/chriskempson/tomorrow-theme
@@ -10,7 +10,7 @@ code[class*="language-"],
 pre[class*="language-"] {
     color: #ccc;
     background: none;
-    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+    font-family: D2Coding, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
     font-size: 1em;
     text-align: left;
     white-space: pre;
@@ -122,8 +122,48 @@ pre[class*="language-"] {
     color: green;
 }
 
+pre[class*="language-"].line-numbers {
+    position: relative;
+    padding-left: 3.8em;
+    counter-reset: linenumber;
+}
+
+pre[class*="language-"].line-numbers > code {
+    position: relative;
+    white-space: inherit;
+}
+
+.line-numbers .line-numbers-rows {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    font-size: 100%;
+    left: -3.8em;
+    width: 3em; /* works for line-numbers below 1000 lines */
+    letter-spacing: -1px;
+    border-right: 1px solid #999;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.line-numbers-rows > span {
+    display: block;
+    counter-increment: linenumber;
+}
+
+.line-numbers-rows > span:before {
+    content: counter(linenumber);
+    color: #999;
+    display: block;
+    padding-right: 0.8em;
+    text-align: right;
+}
+
 .token a {
-    color: inherit !important;
+    color: inherit;
 }
 div.code-toolbar {
     position: relative;
@@ -172,7 +212,6 @@ div.code-toolbar > .toolbar > .toolbar-item > a,
 div.code-toolbar > .toolbar > .toolbar-item > button,
 div.code-toolbar > .toolbar > .toolbar-item > span {
     color: #bbb;
-    font-family: D2Coding, Monaco, Andale Mono, Ubuntu Mono, monospace;
     font-size: 0.8em;
     padding: 0 0.5em;
     background: #f5f2f0;
@@ -258,6 +297,20 @@ span.inline-color {
 
 .command-line-prompt > span[data-prompt]:before {
     content: attr(data-prompt);
+}
+
+pre.diff-highlight > code .token.deleted:not(.prefix),
+pre > code.diff-highlight .token.deleted:not(.prefix) {
+    background-color: rgba(255, 0, 0, 0.1);
+    color: inherit;
+    display: block;
+}
+
+pre.diff-highlight > code .token.inserted:not(.prefix),
+pre > code.diff-highlight .token.inserted:not(.prefix) {
+    background-color: rgba(0, 255, 128, 0.1);
+    color: inherit;
+    display: block;
 }
 
 .token.treeview-part .entry-line {
