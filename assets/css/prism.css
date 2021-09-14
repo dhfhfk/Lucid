@@ -163,7 +163,7 @@ pre[class*="language-"].line-numbers > code {
 }
 
 .token a {
-    color: inherit;
+    color: inherit !important;
 }
 div.code-toolbar {
     position: relative;
