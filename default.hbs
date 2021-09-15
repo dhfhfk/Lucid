@@ -12,14 +12,16 @@
 
     {{!-- Preload assets --}}
     <link rel="preload" href="{{asset "css/app.css"}}" as="style" />
-    <link rel="stylesheet" type="text/css" href="{{asset "css/prism.css"}}" />
-    <script type="text/javascript" src="{{asset "js/prism.js"}}"></script>
     <link rel="preload" href="{{asset "js/manifest.js"}}" as="script" />
     <link rel="preload" href="{{asset "js/vendor/content-api.min.js"}}" as="script" />
     <link rel="preload" href="{{asset "js/vendor.js"}}" as="script" />
     <link rel="preload" href="{{asset "js/app.js"}}" as="script" />
     <link rel="preconnect" href="https://polyfill.io">
     <link rel="dns-prefetch" href="https://polyfill.io">
+
+    {{!-- Prism Code Block --}}
+    <link rel="stylesheet" type="text/css" href="{{asset "css/prism.css"}}" />
+    <script src="{{asset "js/prism.js"}}"></script>
 
     {{!-- This #block helper will try to preload page-specific assets --}}
     {{{block "preload"}}}

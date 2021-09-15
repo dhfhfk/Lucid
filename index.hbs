@@ -48,17 +48,17 @@ into the {body} of the default.hbs template --}}
                         <div class="m-featured-article__picture">
                           {{#if feature_image}}
                             <style>
-                              #featured-bg-{{id}} {
+                              #featured-bg-{{comment_id}} {
                                 background-image: url({{img_url feature_image size='l'}});
                               }
                             
                               @media(max-width: 768px) {
-                                #featured-bg-{{id}} {
+                                #featured-bg-{{comment_id}} {
                                   background-image: url({{img_url feature_image size='m'}});
                                 }
                               }
                             </style>
-                            <div id="featured-bg-{{id}}"></div>
+                            <div id="featured-bg-{{comment_id}}"></div>
                           {{/if}}
                         </div>
                         <div class="m-featured-article__meta">
