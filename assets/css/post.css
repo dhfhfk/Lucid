@@ -268,7 +268,7 @@
 .l-post-content.kg-image-card,
 .l-post-content figure {
     padding: 0px 0 10px;
-    margin: 0 -20px;
+    margin: 0;
 }
 @media only screen and (min-width: 48rem) {
     .l-post-content.kg-image-card,
@@ -488,11 +488,6 @@
     -webkit-hyphens: none;
     -ms-hyphens: none;
     hyphens: none;
-}
-@media only screen and (min-width: 48rem) {
-    .l-post-content pre {
-        margin-bottom: 10px;
-    }
 }
 .l-post-content pre > code {
     display: block;
@@ -909,15 +904,18 @@
     top: 100px;
     margin-top: 110px;
 }
+.toc-container {
+    display: none;
+}
 @media only screen and (max-width: 64rem) {
     .sidebar {
         height: 50px;
         margin-top: 0;
     }
 }
-@media only screen and (max-width: 64rem) {
+@media only screen and (min-width: 64rem) {
     .toc-container {
-        display: none !important;
+        display: block !important;
     }
 }
 .m-subscribe-section {
