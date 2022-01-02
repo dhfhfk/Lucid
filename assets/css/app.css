@@ -275,7 +275,7 @@ textarea {
     --header-menu-gradient-second-color: #fff;
 }
 [data-theme="dark"] {
-    --background-color: #111;
+    --background-color: #151719;
     --primary-foreground-color: #dcdcdc;
     --secondary-foreground-color: #fff;
     --primary-subtle-color: #629fff;
@@ -307,7 +307,7 @@ textarea {
 }
 @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-        --background-color: #111;
+        --background-color: #151719;
         --primary-foreground-color: #dcdcdc;
         --secondary-foreground-color: #fff;
         --primary-subtle-color: #629fff;
@@ -1732,8 +1732,8 @@ _:-ms-fullscreen {
     }
 }
 .m-hero.with-picture {
-    color: #fff;
-    background-color: #000;
+    color: var(--titles-color);
+    background-color: var(--background-color);
 }
 @media only screen and (min-width: 48rem) {
     .m-hero.with-picture {
@@ -1746,7 +1746,7 @@ _:-ms-fullscreen {
     }
 }
 .m-hero.with-picture .m-hero-title {
-    color: #fff;
+    color: var(--titles-color);
 }
 .m-hero.no-picture.in-post {
     display: none;
@@ -2026,45 +2026,24 @@ _:-ms-fullscreen {
     display: flex;
     flex-direction: column;
     position: relative;
-    margin-bottom: 20px;
-    height: 400px;
-    background-color: var(--background-color);
+    height: 358px;
+    margin-bottom: 30px;
     border-radius: 10px;
-    border: 1px solid var(--secondary-border-color);
     z-index: 1;
     transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
-}
-.m-article-card:hover {
-    transform: translateY(-5px);
-}
-.m-article-card:hover:before {
-    box-shadow: var(--article-shadow-hover), 0 0 0 transparent;
-}
-.m-article-card:hover .m-article-card__author {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 0 0 transparent;
 }
 @media only screen and (min-width: 48rem) {
     .m-article-card {
         width: calc(50% - 20px);
-        height: 420px;
-        margin-left: 10px;
-        margin-right: 10px;
-        margin-bottom: 20px;
     }
 }
 @media only screen and (min-width: 64rem) {
     .m-article-card {
         width: calc(33.33333% - 40px);
-        margin-left: 20px;
-        margin-right: 20px;
-        margin-bottom: 40px;
     }
 }
 .m-article-card.no-picture .m-article-card__picture {
     height: 85px !important;
-}
-.m-article-card.no-picture .m-article-card__info {
-    background-color: var(--secondary-subtle-color);
 }
 .m-article-card.no-picture .m-article-card__title {
     line-height: 1.4;
@@ -2093,14 +2072,12 @@ _:-ms-fullscreen {
     bottom: 0;
     left: 10px;
     border-radius: 10px;
-    box-shadow: var(--article-shadow-normal), 0 0 0 transparent;
     transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
 }
 .m-article-card__picture {
     position: relative;
     height: 200px;
-    border-radius: 10px 10px 0 0;
-    background-color: var(--secondary-subtle-color);
+    border-radius: 15px;
     overflow: hidden;
     transform: translateZ(0);
 }
@@ -2199,16 +2176,11 @@ _:-ms-fullscreen {
 .m-article-card__info {
     flex: 1;
     position: relative;
-    padding-top: 48px;
+    padding: 32px 10px 0;
     height: 200px;
     overflow: hidden;
     border-radius: 0 0 10px 10px;
     background-color: var(--background-color);
-}
-@media only screen and (min-width: 48rem) {
-    .m-article-card__info {
-        padding-top: 53px;
-    }
 }
 .m-article-card__info.no-tag {
     padding-top: 0 !important;
@@ -2223,8 +2195,9 @@ _:-ms-fullscreen {
 }
 .m-article-card__tag {
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 12px;
+    left: 0;
+    padding-left: 10px;
     right: 20px;
     color: var(--link-color);
     letter-spacing: 0.2px;
@@ -2232,24 +2205,9 @@ _:-ms-fullscreen {
     font-size: 0.875rem;
     font-weight: 600;
 }
-@media only screen and (min-width: 48rem) {
-    .m-article-card__tag {
-        top: 25px;
-        left: 25px;
-    }
-}
 .m-article-card__info-link {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     width: 100%;
     height: 100%;
-    padding: 0 20px 20px;
-}
-@media only screen and (min-width: 48rem) {
-    .m-article-card__info-link {
-        padding: 0 25px 25px;
-    }
 }
 .m-article-card__title {
     color: var(--titles-color);
@@ -2276,6 +2234,7 @@ _:-ms-fullscreen {
     color: var(--titles-color);
     letter-spacing: 0.2px;
     font-size: 0.875rem;
+    padding-top: 24px;
 }
 .m-article-card__author-stats span:nth-child(2),
 .m-article-card__timestamp span:nth-child(2) {
