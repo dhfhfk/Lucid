@@ -40,14 +40,6 @@ into the {body} of the default.hbs template --}}
               <aside class="toc-container js-sticky">
                 <div class="toc"></div>
               </aside>
-                <aside class="m-share__content js-sticky">
-                  <button class="m-icon-button filled in-share progress js-scrolltop" aria-label="{{t "Scroll to top"}}">
-                    <span class="icon-arrow-top" aria-hidden="true"></span>
-                    <svg aria-hidden="true">
-                      <circle class="progress-ring__circle js-progress" fill="transparent" r="0" />
-                    </svg>
-                  </button>
-                </aside>
                 </div>
               </div>
           <div
@@ -171,6 +163,12 @@ into the {body} of the default.hbs template --}}
       {{/if}}
     </div>
   </article>
+  <button class="m-icon-button filled in-share progress js-scrolltop" aria-label="{{t "Scroll to top"}}">
+    <span class="icon-arrow-top" aria-hidden="true"></span>
+    <svg aria-hidden="true">
+      <circle class="progress-ring__circle js-progress" fill="transparent" r="0" />
+    </svg>
+  </button>
 </main>
 
 {{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}
