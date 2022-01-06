@@ -813,6 +813,7 @@
     margin-bottom: 15px;
 }
 .m-share {
+    display: none;
     position: fixed;
     left: 0;
     bottom: 0;
@@ -829,10 +830,11 @@
 }
 @media only screen and (min-width: 64rem) {
     .m-share {
+        display: block;
         position: absolute;
         top: 0;
         left: auto;
-        right: -155px;
+        right: -125px;
         width: 300px;
         height: auto;
         background-color: transparent;
@@ -841,12 +843,14 @@
 }
 @media only screen and (min-width: 80rem) {
     .m-share {
+        display: block;
         width: 325px;
         right: -175px;
     }
 }
 @media only screen and (min-width: 90rem) {
     .m-share {
+        display: block;
         right: -180px;
     }
 }
