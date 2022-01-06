@@ -45,5 +45,5 @@ a.toc-link {
     width: 2px;
 }
 .is-active-link::before {
-    background-color: var(--primary-subtle-color);
+    background-color: var(--ghost-accent-color);
 }
