@@ -115,19 +115,6 @@
     <script defer src="{{asset "js/vendor/content-api.min.js"}}"></script>
     <script defer src="{{asset "js/vendor.js"}}"></script>
     <script defer src="{{asset "js/app.js"}}"></script>
-    <script src="{{asset "js/tocbot.js"}}"></script>
-    <script>
-      tocbot.init({
-      // Where to render the table of contents.
-      tocSelector: '.toc',
-      // Where to grab the headings to build the table of contents.
-      contentSelector: '.js-post-content',
-      // Which headings to grab inside of the contentSelector element.
-      headingSelector: 'h1, h2, h3, h4, h5, h6' ,
-      // For headings inside relative or absolute positioned containers within content.
-      hasInnerContainers: true,
-      });
-    </script>
     {{!-- The #block helper will pull in data from the #contentFor other template files --}}
     {{{block "scripts"}}}
 

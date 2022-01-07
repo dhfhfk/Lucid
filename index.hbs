@@ -69,13 +69,6 @@ into the {body} of the default.hbs template --}}
                               <div style="background-image: url({{asset "images/default-avatar-square-small.jpg"}});"></div>
                             {{/if}}
                           </a>
-                          {{#if primary_tag}}
-                            <a href="{{primary_tag.url}}" class="m-featured-article__tag">{{primary_tag.name}}</a>
-                          {{/if}}
-                        </div>
-                        <div class="m-featured-article__ribbon">
-                          <span class="icon-star"></span>
-                          <span>{{t "Featured"}}</span>
                         </div>
                         <a href="{{url}}" class="m-featured-article__content">
                           <h2 class="m-featured-article__title js-featured-article-title" title="{{title}}">
@@ -83,8 +76,10 @@ into the {body} of the default.hbs template --}}
                           </h2>
                           <div class="m-featured-article__timestamp">
                             <span>{{date published_at timeago="true"}}</span>
-                            <span>&bull;</span>
-                            <span>{{reading_time minute=(t "1 min read") minutes=(t "% min read")}}</span>
+                            {{#if @custom.show_reading_time}}
+                              <span>&bull;</span>
+                              <span>{{reading_time minute=(t "1 min read") minutes=(t "% min read")}}</span>
+                            {{/if}}
                           </div>
                         </a>
                       </article>

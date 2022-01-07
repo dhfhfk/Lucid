@@ -37,8 +37,10 @@
         </div>
         <div class="m-article-card__timestamp">
           <span>{{date published_at timeago="true"}}</span>
-          <span>&bull;</span>
-          <span>{{reading_time minute=(t "1 min read") minutes=(t "% min read")}}</span>
+          {{#if @custom.show_reading_time}}
+            <span>&bull;</span>
+            <span>{{reading_time minute=(t "1 min read") minutes=(t "% min read")}}</span>
+          {{/if}}
         </div>
       </a>
     </div>

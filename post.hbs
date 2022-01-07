@@ -13,6 +13,22 @@ This template is used for the post page.
   <link rel="stylesheet" type="text/css" href="{{asset "css/post.css"}}" media="screen" />
 {{/contentFor}}
 
+{{!-- TOC Code Block --}}
+<link rel="stylesheet" type="text/css" href="{{asset "css/tocbot.css"}}" />
+
+<style>
+  .m-hero__picture img {
+    {{#match @custom.feature_image_style "Contain"}}
+      -o-object-fit: contain;
+      object-fit: contain;
+    {{/match}}
+    {{#match @custom.feature_image_style "Cover"}}
+      -o-object-fit: cover;
+      object-fit: cover;
+    {{/match}}
+  }
+</style>
+
 {{!-- The tag below means: insert everything in this file
 into the {body} of the default.hbs template --}}
 {{!< default}}
@@ -35,15 +51,7 @@ into the {body} of the default.hbs template --}}
       {{#post}}
         <div class="l-wrapper in-post {{#unless feature_image}}no-image{{/unless}} js-aos-wrapper" data-aos="fade-up"
           data-aos-delay="300">
-          <div class="m-share">
-            <div class="sidebar">
-              <aside class="toc-container js-sticky">
-                <div class="toc"></div>
-              </aside>
-                </div>
-              </div>
-          <div
-            class="l-post-content js-progress-content">
+          <div class="l-post-content js-progress-content">
             <header class="m-heading">
               {{#if primary_tag}}
                 <a href="{{primary_tag.url}}" class="m-heading__meta__tag">{{primary_tag.name}}</a>
@@ -88,6 +96,14 @@ into the {body} of the default.hbs template --}}
                 </section>
               {{/if}}
             </div>
+          </div>
+          <div class="m-share">
+            <div class="sidebar">
+              <aside class="toc-container js-sticky">
+                <div class="toc"></div>
+              </aside>
+                </div>
+              </div>
           </div>
         </div>
         {{!-- If you want to embed comments, this is a good place to do it! --}}
@@ -170,6 +186,20 @@ into the {body} of the default.hbs template --}}
     </svg>
   </button>
 </main>
+
+<script src="{{asset "js/tocbot.js"}}"></script>
+<script>
+  tocbot.init({
+  // Where to render the table of contents.
+  tocSelector: '.toc',
+  // Where to grab the headings to build the table of contents.
+  contentSelector: '.js-post-content',
+  // Which headings to grab inside of the contentSelector element.
+  headingSelector: 'h1, h2, h3, h4, h5, h6' ,
+  // For headings inside relative or absolute positioned containers within content.
+  hasInnerContainers: true,
+  });
+</script>
 
 {{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}
 {{#contentFor "scripts"}}
