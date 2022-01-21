@@ -1,16 +1,13 @@
-.l-grid {
-    padding-bottom: 20px;
-}
 @media only screen and (min-width: 48rem) {
     .l-grid {
-        display: flex;
-        flex-wrap: wrap;
-        margin: 0 -10px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 15px;
     }
 }
-@media only screen and (min-width: 80rem) {
+@media only screen and (max-width: 1000px) {
     .l-grid {
-        margin: 0 -20px;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 @media only screen and (min-width: 48rem) {

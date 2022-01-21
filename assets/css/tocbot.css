@@ -7,12 +7,16 @@
 }
 .toc > .toc-list li {
     list-style: none;
+    margin-bottom: 10px;
+}
+.toc > .toc-list li:last-child {
+    margin-bottom: 0;
 }
 .js-toc {
     overflow-y: hidden;
 }
 .toc-list {
-    margin: 0;
+    margin-top: 7px;
     padding-left: 10px;
 }
 a.toc-link {

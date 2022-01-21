@@ -19,14 +19,6 @@
     <link rel="preconnect" href="https://polyfill.io">
     <link rel="dns-prefetch" href="https://polyfill.io">
 
-    {{!-- Prism Code Block --}}
-    <link rel="stylesheet" type="text/css" href="{{asset "css/prism.css"}}" />
-    <script src="{{asset "js/prism.js"}}"></script>
-
-    {{!-- TOC Code Block --}}
-    <link rel="stylesheet" type="text/css" href="{{asset "css/tocbot.css"}}" />
-    
-
     {{!-- This #block helper will try to preload page-specific assets --}}
     {{{block "preload"}}}
 
@@ -105,9 +97,6 @@
 
     {{!-- The footer --}}
     {{> footer}}
-
-    {{!-- Notifications alerts --}}
-    {{> "notifications"}}
 
     {{!-- Common scripts shared between pages --}}
     <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver%2CPromise%2CArray.prototype.includes%2CString.prototype.endsWith%2CString.prototype.startsWith%2CObject.assign%2CNodeList.prototype.forEach"></script>

@@ -31,7 +31,9 @@ into the {body} of the default.hbs template --}}
     {{#if @site.description}}
       <p class="m-hero-description bigger">{{@site.description}}</p>
     {{/if}}
-    <a href="{{@site.url}}/newsletter" class="m-button filled js-newsletter">{{t "Subscribe"}}</a>
+    {{#if @labs.members}}
+      <a href="{{@site.url}}/newsletter" class="m-button filled js-newsletter">{{t "Subscribe"}}</a>
+    {{/if}}
   </div>
   </section>
   <div class="l-content">
@@ -77,7 +79,7 @@ into the {body} of the default.hbs template --}}
                           <div class="m-featured-article__timestamp">
                             <span>{{date published_at timeago="true"}}</span>
                             {{#if @custom.show_reading_time}}
-                              <span>&bull;</span>
+                              <span>|</span>
                               <span>{{reading_time minute=(t "1 min read") minutes=(t "% min read")}}</span>
                             {{/if}}
                           </div>

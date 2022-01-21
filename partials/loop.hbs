@@ -1,4 +1,18 @@
 {{!-- The template below includes the markup for each post --}}
+{{#if @custom.hover_animation}}
+  <style>
+    .m-article-card__title {
+    transition: color 0.25s ease;
+  }
+  .m-article-card:hover {
+      transform: translateY(-3px);
+  }
+  .m-article-card:hover .m-article-card__title {
+      color: var(--ghost-accent-color);
+  }
+  </style>
+{{/if}}
+
 
 {{#foreach posts}}
   {{#is "post"}}
@@ -10,13 +24,6 @@
       {{#if feature_image}}
         <img class="m-article-card__picture-background" src="{{img_url feature_image size="m"}}" loading="lazy" alt="">
       {{/if}}
-      <a href="{{primary_author.url}}" class="m-article-card__author js-tooltip" aria-label="{{primary_author.name}}" data-tippy-content="{{t "Posted by"}} {{primary_author.name}} {{authors autolink="false" from="2" prefix=(t "Among with") separator=" , "}}">
-        {{#if primary_author.profile_image}}
-          <div style="background-image: url({{img_url primary_author.profile_image size="xs"}});"></div>
-        {{else}}
-          <div style="background-image: url({{asset "images/default-avatar-square-small.jpg"}});"></div>
-        {{/if}}
-      </a>
       {{#if featured}}
         <a href="{{url}}" class="m-article-card__featured js-tooltip" data-tippy-content="{{t "Featured"}}" aria-label="{{t "Featured"}}">
           <span class="icon-star" aria-hidden="true"></span>
@@ -35,14 +42,27 @@
             {{title}}
           </h2>
         </div>
-        <div class="m-article-card__timestamp">
-          <span>{{date published_at timeago="true"}}</span>
-          {{#if @custom.show_reading_time}}
-            <span>&bull;</span>
-            <span>{{reading_time minute=(t "1 min read") minutes=(t "% min read")}}</span>
-          {{/if}}
-        </div>
       </a>
+      <div class="m-article-card__footer">
+        <a href="{{url}}" class="m-article-card__footer-link" aria-hidden="true" tabindex="-1">
+          <div class="m-article-card__timestamp">
+            <span>{{date published_at timeago="true"}}</span>
+            {{#if @custom.show_reading_time}}
+              <span>|</span>
+              <span>{{reading_time minute=(t "1 min read") minutes=(t "% min read")}}</span>
+            {{/if}}
+          </div>
+        </a>
+        {{#if @custom.show_post_author}}
+          <a href="{{primary_author.url}}" class="m-article-card__author js-tooltip" aria-label="{{primary_author.name}}" data-tippy-content="{{t "Posted by"}} {{primary_author.name}} {{authors autolink="false" from="2" prefix=(t "Among with") separator=" , "}}">
+          {{#if primary_author.profile_image}}
+            <div style="background-image: url({{img_url primary_author.profile_image size="xs"}});"></div>
+          {{else}}
+            <div style="background-image: url({{asset "images/default-avatar-square-small.jpg"}});"></div>
+          {{/if}}
+          </a>
+        {{/if}}
+      </div>
     </div>
   </article>
   {{#is "post"}}

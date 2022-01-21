@@ -56,6 +56,14 @@
                 "type": "boolean",
                 "default": true
             },
+            "show_post_author": {
+                "type": "boolean",
+                "default": true
+            },
+            "hover_animation": {
+                "type": "boolean",
+                "default": true
+            },
             "feature_image_style": {
                 "type": "select",
                 "options": [
